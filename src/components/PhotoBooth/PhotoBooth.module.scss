@@ -1,0 +1,18 @@
+.booth {
+  margin-top: 30px;
+  &__name {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  &__size {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+    > span {
+      color: #6a6a6a;
+    }
+  }
+}

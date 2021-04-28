@@ -1,0 +1,33 @@
+.player {
+  position: relative;
+  padding: 3px;
+  border: 1px solid;
+  border: 3px solid #ee3d48;
+  box-sizing: border-box;
+  border-radius: 8px;
+  width: 328px;
+  height: 200px;
+  margin: 40px auto;
+  margin-bottom: 60px;
+  z-index: 0;
+
+  .pounds {
+    position: absolute;
+    top: -14px;
+    right: -14px;
+    z-index: -1;
+  }
+  .elips {
+    position: absolute;
+    bottom: -86px;
+    left: -26px;
+    z-index: -1;
+  }
+
+  > div {
+    border-radius: 8px;
+    > div {
+      border-radius: 8px;
+    }
+  }
+}

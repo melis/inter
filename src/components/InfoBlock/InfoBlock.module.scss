@@ -1,0 +1,41 @@
+.InfoBlock {
+  h1 {
+    font-family: Roboto Slab;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 40px;
+    line-height: 53px;
+    .title {
+      color: #ee3d48;
+    }
+  }
+  p {
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 16px;
+    line-height: 130%;
+    a {
+      color: #ee3d48;
+    }
+  }
+}
+
+.advantages {
+  display: flex;
+  flex-wrap: wrap;
+  &__item {
+    padding: 10px 30px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 16px;
+    text-align: center;
+    width: 50%;
+    img {
+      margin: auto;
+      display: block;
+    }
+  }
+}
