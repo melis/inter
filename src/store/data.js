@@ -1,67 +1,75 @@
 let options = [
-  [
-    {
-      id: 1,
-      img:
-        "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
-      price: 100,
-    },
+  {
+    id: 1,
+    img:
+      "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
+    price: 100,
+    name: "Разработка макета рамки 1",
+  },
 
-    {
-      id: 2,
-      img:
-        "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
-      price: 200,
-    },
-    {
-      id: 3,
-      img:
-        "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
-      price: 300,
-    },
-    {
-      id: 4,
-      img:
-        "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
-      price: 400,
-    },
-    {
-      id: 5,
-      img:
-        "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
-      price: 500,
-    },
-    {
-      id: 6,
-      img:
-        "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
-      price: 600,
-    },
-    {
-      id: 7,
-      img:
-        "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
-      price: 700,
-    },
-    {
-      id: 8,
-      img:
-        "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
-      price: 800,
-    },
-    {
-      id: 9,
-      img:
-        "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
-      price: 900,
-    },
-    {
-      id: 10,
-      img:
-        "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
-      price: 1000,
-    },
-  ],
+  {
+    id: 2,
+    img:
+      "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
+    price: 200,
+    name: "Разработка макета рамки 2",
+  },
+  {
+    id: 3,
+    img:
+      "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
+    price: 300,
+    name: "Разработка макета рамки 3",
+  },
+  {
+    id: 4,
+    img:
+      "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
+    price: 400,
+    name: "Разработка макета рамки 4",
+  },
+  {
+    id: 5,
+    img:
+      "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
+    price: 500,
+    name: "Разработка макета рамки 5",
+  },
+  {
+    id: 6,
+    img:
+      "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
+    price: 600,
+    name: "Разработка макета рамки 6",
+  },
+  {
+    id: 7,
+    img:
+      "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
+    price: 700,
+    name: "Разработка макета рамки 7",
+  },
+  {
+    id: 8,
+    img:
+      "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
+    price: 800,
+    name: "Разработка макета рамки 8",
+  },
+  {
+    id: 9,
+    img:
+      "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
+    price: 900,
+    name: "Разработка макета рамки 9",
+  },
+  {
+    id: 10,
+    img:
+      "https://photoboothplanet.com/cms/wp-content/uploads/2017/01/double-strip-photobooth-bench-new.png",
+    price: 1000,
+    name: "Разработка макета рамки 10",
+  },
 ];
 
 let img = [

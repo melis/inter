@@ -14,7 +14,7 @@ export default function CoruselB({ imgs }) {
     <Carousel activeIndex={index} onSelect={handleSelect}>
       {imgs.map((img) => {
         return (
-          <Carousel.Item>
+          <Carousel.Item key={img}>
             <img
               className="d-block w-100"
               src={img}

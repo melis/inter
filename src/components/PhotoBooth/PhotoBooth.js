@@ -11,7 +11,7 @@ const PhotoBooth = ({ booth }) => {
       <div className={style.booth__size}>
         Размер: <span>{booth.size}</span>
       </div>
-      <Options />
+      <Options options={booth.options} />
       <div>{booth.price} р</div>
     </div>
   );

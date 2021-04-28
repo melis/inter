@@ -1,4 +1,6 @@
 .options {
+  height: 152px;
+  overflow: auto;
   span {
     margin-top: 10px;
     font-family: Work Sans;
@@ -9,5 +11,21 @@
 
     color: #ee3d48;
     border-bottom: 2px solid #ee3d48;
+  }
+  .options__list {
+  }
+  .options__info {
+    padding: 5px;
+  }
+  .options__item {
+    display: flex;
+    height: 76px;
+    background: #fafafa;
+    border: 1px solid #ebebeb;
+    img {
+      padding: 5px;
+      width: 60px;
+      height: 60px;
+    }
   }
 }

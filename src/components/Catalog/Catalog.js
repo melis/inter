@@ -4,7 +4,7 @@ import PhotoBooth from "../PhotoBooth/PhotoBooth";
 import style from "./Catalog.module.scss";
 const Catalog = () => {
   const photoBooths = useSelector(({ booths }) => booths);
-  console.log(photoBooths);
+
   const list = photoBooths.map((el) => {
     return <PhotoBooth booth={el} key={el.id} />;
   });
