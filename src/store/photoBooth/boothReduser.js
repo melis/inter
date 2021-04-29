@@ -6,8 +6,8 @@ const initialState = {
 
 const boothReduser = (state = initialState, action) => {
   switch (action.type) {
-    case "FILTER":
-      return { ...state };
+    case "ADD_BOOTH":
+      return { ...state, booths: [...state.booths, action.booths] };
 
     default:
       return state;
