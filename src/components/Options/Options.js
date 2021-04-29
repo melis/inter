@@ -4,7 +4,7 @@ import check from "../../img/check.svg";
 const Options = ({ options, setOnOptions }) => {
   return (
     <div className={style.options}>
-      <span>Доп.опции</span>
+      <span className={style.options__title}>Доп.опции</span>
       <div className={style.options__list}>
         {options.map((op) => {
           return (
