@@ -5,9 +5,11 @@ import style from "./PhotoBooth.module.scss";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setOrder } from "../../store/ordered/orderActions";
+import RentTime from "../RentTime/RentTime";
 
 const PhotoBooth = ({ booth }) => {
   const [onOptions, setOnOptions] = useState([]);
+  const [time, setTime] = useState(1);
   const dispatch = useDispatch();
 
   return (
@@ -18,16 +20,19 @@ const PhotoBooth = ({ booth }) => {
         Размер: <span>{booth.size}</span>
       </div>
       <Options options={booth.options} setOnOptions={setOnOptions} />
+      <RentTime setTime={setTime} time={time} />
       <div className={style.booth__price}>
         <div>
-          {booth.price + onOptions.reduce((t, el) => t + el.price, 0)} р
+          {(booth.price + onOptions.reduce((t, el) => t + el.price, 0)) * time}{" "}
+          р
         </div>
         <Link
           to="/order"
           onClick={() => {
             let order = { ...booth };
             order.options = onOptions;
-            dispatch(setOrder({ order }));
+            order.time = time;
+            dispatch(setOrder(order));
           }}
         >
           <button className={style.booth__button}>Оставит заявку</button>

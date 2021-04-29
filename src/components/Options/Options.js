@@ -11,11 +11,10 @@ const Options = ({ options, setOnOptions }) => {
               <img src={op.img} alt="" />
               <div className={style.options__info}>
                 <div>{op.name}</div>
-                <div>От {op.price} р</div>
+                <div>+ {op.price} р</div>
                 <input
                   type="checkbox"
                   onChange={(e) => {
-                    console.log(e.target.checked, op.id);
                     if (e.target.checked) {
                       setOnOptions((arr) => {
                         return [...arr, op];

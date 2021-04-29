@@ -16,6 +16,13 @@
   }
   .options__info {
     padding: 5px;
+    position: relative;
+    flex-grow: 1;
+    input {
+      position: absolute;
+      right: 15px;
+      top: 30px;
+    }
   }
   .options__item {
     display: flex;

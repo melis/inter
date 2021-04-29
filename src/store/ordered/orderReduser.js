@@ -1,8 +1,4 @@
-const initialState = {
-  order: null,
-};
-
-const orderReduser = (state = initialState, action) => {
+const orderReduser = (state = null, action) => {
   switch (action.type) {
     case "ORDER":
       return action.order;
