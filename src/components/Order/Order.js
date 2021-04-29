@@ -20,6 +20,7 @@ const Order = ({ history }) => {
       <div className={style.order__title}>
         Ваша заявка{" "}
         <img
+          alt=""
           src={close}
           onClick={() => {
             history.push("/");

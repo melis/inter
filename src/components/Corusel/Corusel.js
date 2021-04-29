@@ -16,7 +16,7 @@ export default function CoruselB({ imgs }) {
         return (
           <Carousel.Item key={img}>
             <img
-              className="d-block w-100"
+              // className="d-block w-100"
               src={img}
               alt=""
               className={style.img}

@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import CoruselB from "../Corusel/Corusel";
 import Options from "../Options/Options";
 import style from "./PhotoBooth.module.scss";

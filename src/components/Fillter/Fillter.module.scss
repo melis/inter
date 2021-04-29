@@ -1,0 +1,19 @@
+.fillter {
+  display: flex;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 14px;
+  line-height: 16px;
+  &__select {
+    margin-left: 10px;
+    border: none;
+    background-color: transparent;
+    color: #939598;
+  }
+  &__select:active {
+    border: transparent;
+  }
+  &__item {
+    border: none;
+  }
+}

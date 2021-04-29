@@ -33,6 +33,7 @@ const Options = ({ options, setOnOptions }) => {
                 />
                 <span className={style.check__sp}>
                   <img
+                    alt=""
                     src={check}
                     style={{
                       width: "15px",
