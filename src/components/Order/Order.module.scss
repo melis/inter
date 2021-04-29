@@ -6,15 +6,49 @@
     font-weight: bold;
     font-size: 32px;
     line-height: 42px;
+    position: relative;
+    img {
+      cursor: pointer;
+      position: absolute;
+      right: 0;
+      top: 50%;
+      transform: translateY(-50%);
+    }
   }
   &__block {
     margin-top: 7px;
     padding: 5px 0;
-
     display: flex;
     justify-content: space-between;
+    align-items: center;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 18px;
   }
   &__ops {
     border-bottom: 1px solid;
+  }
+
+  &__size {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 14px;
+  }
+  &__form {
+    input {
+      border-radius: 6px;
+      height: 40px;
+      margin: 10px 0;
+      display: block;
+      width: 100%;
+      border: 1px solid #ee3d48;
+    }
+  }
+  &__button {
+    background: #ee3d48;
+    border: none;
+    color: white;
   }
 }

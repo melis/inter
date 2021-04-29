@@ -1,11 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import { useDispatch, useSelector } from "react-redux";
-import { Redirect } from "react-router";
+import { Redirect, withRouter } from "react-router";
 import { setOrder } from "../../store/ordered/orderActions";
 import style from "./Order.module.scss";
+import close from "../../img/close.svg";
 
-const Order = () => {
+const Order = ({ history }) => {
   let ordered = useSelector(({ orderReduser }) => orderReduser);
+  const [phone, setPhone] = useState("+7 (000) 000 00 00");
+
   let dispatch = useDispatch();
   if (!ordered) {
     return <Redirect to="/" />;
@@ -14,12 +17,24 @@ const Order = () => {
 
   return (
     <div className={style.order}>
-      <div className={style.order__title}>Ваша заявка</div>
+      <div className={style.order__title}>
+        Ваша заявка{" "}
+        <img
+          src={close}
+          onClick={() => {
+            history.push("/");
+          }}
+        />
+      </div>
       <div className={style.order__block}>
-        <div>{ordered.name}</div>
+        <div className={style.order__name}>
+          <div>{ordered.name}</div>
+          <div className={style.order__size}>Размер: {ordered.size}</div>
+        </div>
         <div>{ordered.price * time} р</div>
       </div>
       <select
+        style={{ borderRadius: "3px" }}
         value={time}
         onChange={(a) => {
           dispatch(setOrder({ ...ordered, time: a.target.value }));
@@ -51,7 +66,29 @@ const Order = () => {
           р
         </div>
       </div>
+      <form
+        className={style.order__form}
+        onSubmit={(e) => {
+          e.preventDefault();
+          console.log({ ordered, phone });
+          alert("Ваша заявка отправлено");
+        }}
+      >
+        <input
+          type="tel"
+          className={style.order__phone}
+          value={phone}
+          onChange={(e) => {
+            setPhone(e.target.value);
+          }}
+        />
+        <input
+          type="submit"
+          value="Отправить заявку"
+          className={style.order__button}
+        />
+      </form>
     </div>
   );
 };
-export default Order;
+export default withRouter(Order);
