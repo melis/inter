@@ -1,6 +1,6 @@
 import React from "react";
 import style from "./Options.module.scss";
-const Options = ({ options }) => {
+const Options = ({ options, setOnOptions }) => {
   return (
     <div className={style.options}>
       <span>Доп.опции</span>
@@ -12,7 +12,21 @@ const Options = ({ options }) => {
               <div className={style.options__info}>
                 <div>{op.name}</div>
                 <div>От {op.price} р</div>
-                <input type="checkbox" />
+                <input
+                  type="checkbox"
+                  onChange={(e) => {
+                    console.log(e.target.checked, op.id);
+                    if (e.target.checked) {
+                      setOnOptions((arr) => {
+                        return [...arr, op];
+                      });
+                    } else {
+                      setOnOptions((arr) => {
+                        return arr.filter((el) => el.id !== op.id);
+                      });
+                    }
+                  }}
+                />
               </div>
             </div>
           );

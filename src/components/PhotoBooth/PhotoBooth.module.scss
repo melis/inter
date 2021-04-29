@@ -1,6 +1,11 @@
 .booth {
   margin-top: 30px;
+  border: 1px solid gray;
+  box-shadow: 0 5px 5px rgba(0, 0, 0, 0.5);
+  padding: 15px;
+  margin: 15px -15px;
   &__name {
+    padding: 15px 0;
     font-family: Work Sans;
     font-style: normal;
     font-weight: 600;
@@ -14,5 +19,30 @@
     > span {
       color: #6a6a6a;
     }
+  }
+  &__price {
+    margin: 15px 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    > div {
+      font-family: Roboto Slab;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 32px;
+      line-height: 42px;
+      display: flex;
+      align-items: center;
+      color: #131313;
+    }
+  }
+  .booth__button {
+    width: 167px;
+    height: 40px;
+    right: 16px;
+    background: #ee3d48;
+    border-radius: 6px;
+    border: none;
+    color: white;
   }
 }
