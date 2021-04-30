@@ -1,6 +1,8 @@
 import React from "react";
 import Catalog from "../Catalog/Catalog";
+import Faq from "../FAQ/Faq";
 import InfoBlock from "../InfoBlock/InfoBlock";
+import News from "../News/News";
 import Palayer from "../Player/Player";
 
 const Main = () => {
@@ -9,6 +11,8 @@ const Main = () => {
       <Palayer />
       <InfoBlock />
       <Catalog />
+      <Faq />
+      <News />
     </>
   );
 };
