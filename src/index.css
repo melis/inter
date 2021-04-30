@@ -28,3 +28,6 @@ body {
   line-height: 19px;
   color: #ee3d48;
 }
+img {
+  width: 100%;
+}

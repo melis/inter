@@ -17,3 +17,33 @@
     border-radius: 6px;
   }
 }
+
+.one {
+  margin-top: 20px;
+  font-family: Work Sans;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 12px;
+  line-height: 14px;
+  &__box {
+    padding: 15px;
+    background: #fafafa;
+    height: 150px;
+  }
+  &__subtitle {
+    color: #ee3d48;
+  }
+  &__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 23px;
+  }
+  &__body {
+    padding: 10px 0;
+  }
+  &__data {
+    font-size: 12px;
+    line-height: 14px;
+    color: #6a6a6a;
+  }
+}

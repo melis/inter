@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { getNews } from "../../store/data";
 import style from "./News.module.scss";
+import photo from "../../img/photo.jpg";
 const News = () => {
   const [news, setNews] = useState([]);
 
@@ -29,5 +30,15 @@ const News = () => {
 export default News;
 
 function One({ one }) {
-  return <div>{one.title}</div>;
+  return (
+    <div className={style.one}>
+      <img alt="" src={photo} />
+      <div className={style.one__box}>
+        <div className={style.one__subtitle}>Услуги</div>
+        <div className={style.one__title}>{one.title}</div>
+        <div className={style.one__body}>{one.body}</div>
+        <div className={style.one__data}>{one.data}</div>
+      </div>
+    </div>
+  );
 }
