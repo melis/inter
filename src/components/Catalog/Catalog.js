@@ -7,6 +7,7 @@ const Catalog = () => {
   const photoBooths = useSelector(({ boothReduser }) => boothReduser.booths);
   const [bArr, setBArr] = useState([...photoBooths]);
   const [fillter, setFillter] = useState("DEFAULT");
+  // const bArr=useCallback(()=>{return bArr}, [])
   useEffect(() => {
     let newArr = [];
     switch (fillter) {
