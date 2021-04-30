@@ -8,13 +8,13 @@ const News = () => {
   useEffect(() => {
     setNews(getNews());
   }, []);
-  console.log(news);
+
   return (
     <div className={style.news}>
       <div className="subtitle">Почему выбирают нас?</div>
       <div className="title">Новости</div>
       {news.map((el) => {
-        return <One one={el} />;
+        return <One one={el} key={el.id} />;
       })}
       <button
         className={style.news__button}

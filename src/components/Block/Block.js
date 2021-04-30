@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import style from "./Block.module.scss";
-import img1 from "../../img/block/Vector1.svg";
-import img2 from "../../img/block/Vector2.svg";
+
 const Block = () => {
   const [active, setActive] = useState(false);
   return (

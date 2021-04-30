@@ -7,16 +7,17 @@ const Catalog = () => {
   const photoBooths = useSelector(({ boothReduser }) => boothReduser.booths);
   const [bArr, setBArr] = useState([...photoBooths]);
   const [fillter, setFillter] = useState("DEFAULT");
+
   useEffect(() => {
     let newArr = [];
     switch (fillter) {
       case "PRICEDOWN":
-        newArr = [...bArr];
+        newArr = [...photoBooths];
         newArr.sort((a, b) => b.price - a.price);
         setBArr(newArr);
         break;
       case "PRICEUP":
-        newArr = [...bArr];
+        newArr = [...photoBooths];
         newArr.sort((a, b) => a.price - b.price);
         setBArr(newArr);
         break;
@@ -26,7 +27,7 @@ const Catalog = () => {
       default:
         setBArr(photoBooths);
     }
-  }, [fillter]);
+  }, [fillter, photoBooths]);
 
   return (
     <div className={style.catalog}>

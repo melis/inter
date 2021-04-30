@@ -15,12 +15,7 @@ export default function CoruselB({ imgs }) {
       {imgs.map((img) => {
         return (
           <Carousel.Item key={img}>
-            <img
-              // className="d-block w-100"
-              src={img}
-              alt=""
-              className={style.img}
-            />
+            <img src={img} alt="" className={style.img} />
           </Carousel.Item>
         );
       })}
