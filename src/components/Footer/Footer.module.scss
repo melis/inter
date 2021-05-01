@@ -1,0 +1,37 @@
+.footer {
+  &__map {
+    margin: 1px -15px;
+    width: 375px;
+  }
+}
+.contact {
+  margin-bottom: 30px;
+  &__item {
+    display: flex;
+  }
+  &__inf {
+    flex-grow: 1;
+    max-width: 280px;
+    padding: 20px 0;
+    border-bottom: 1px solid #d5dae0;
+  }
+  &__logo {
+    width: 65px;
+    text-align: center;
+    padding-top: 25px;
+  }
+  &__title {
+    font-family: Roboto Slab;
+    font-size: 20px;
+    line-height: 32px;
+  }
+  &__body {
+    margin-top: 7px;
+    font-family: Work Sans;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 21px;
+    color: #6a6a6a;
+  }
+}

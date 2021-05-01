@@ -1,6 +1,6 @@
 import React, { Suspense } from "react";
-// import Catalog from "../Catalog/Catalog";
 import Faq from "../FAQ/Faq";
+import Footer from "../Footer";
 import InfoBlock from "../InfoBlock/InfoBlock";
 import News from "../News/News";
 import Palayer from "../Player/Player";
@@ -16,6 +16,7 @@ const Main = () => {
       </Suspense>
       <Faq />
       <News />
+      <Footer />
     </>
   );
 };

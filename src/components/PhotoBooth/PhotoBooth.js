@@ -1,4 +1,5 @@
 import React, { useState } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
 import Options from "../Options/Options";
 import style from "./PhotoBooth.module.scss";
 import { Link } from "react-router-dom";
@@ -6,8 +7,6 @@ import { useDispatch } from "react-redux";
 import { setOrder } from "../../store/ordered/orderActions";
 import RentTime from "../RentTime/RentTime";
 import CaruselB from "../Corusel/Corusel";
-import "bootstrap/dist/css/bootstrap.min.css";
-// const CaruselB = React.lazy(() => import("../Corusel/Corusel"));
 
 const PhotoBooth = ({ booth }) => {
   const [onOptions, setOnOptions] = useState([]);
@@ -16,12 +15,10 @@ const PhotoBooth = ({ booth }) => {
 
   return (
     <div className={style.booth}>
-      {/* <Suspense fallback={<div>Загрузка...</div>}> */}
       <CaruselB imgs={booth.img} />
-      {/* </Suspense> */}
       <div className={style.booth__name}>{booth.name}</div>
       <div className={style.booth__size}>
-        Размер: <span>{booth.size}</span> v
+        Размер: <span>{booth.size}</span>
       </div>
       <Options options={booth.options} setOnOptions={setOnOptions} />
       <RentTime setTime={setTime} time={time} />
