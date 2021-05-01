@@ -1,11 +1,12 @@
-import React, { useState } from "react";
-import CaruselB from "../Corusel/Corusel";
+import React, { useState, Suspense } from "react";
 import Options from "../Options/Options";
 import style from "./PhotoBooth.module.scss";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { setOrder } from "../../store/ordered/orderActions";
 import RentTime from "../RentTime/RentTime";
+// import CaruselB from "../Corusel/Corusel";
+const CaruselB = React.lazy(() => import("../Corusel/Corusel"));
 
 const PhotoBooth = ({ booth }) => {
   const [onOptions, setOnOptions] = useState([]);
@@ -14,7 +15,9 @@ const PhotoBooth = ({ booth }) => {
 
   return (
     <div className={style.booth}>
-      <CaruselB imgs={booth.img} />
+      <Suspense fallback={<div>Загрузка...</div>}>
+        <CaruselB imgs={booth.img} />
+      </Suspense>
       <div className={style.booth__name}>{booth.name}</div>
       <div className={style.booth__size}>
         Размер: <span>{booth.size}</span>
