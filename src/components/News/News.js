@@ -4,9 +4,10 @@ import style from "./News.module.scss";
 import photo from "../../img/photo.jpg";
 const News = () => {
   const [news, setNews] = useState([]);
+  const [on, setOn] = useState(true);
 
   useEffect(() => {
-    setNews(getNews());
+    setNews(getNews().newss);
   }, []);
 
   return (
@@ -16,14 +17,18 @@ const News = () => {
       {news.map((el) => {
         return <One one={el} key={el.id} />;
       })}
-      <button
-        className={style.news__button}
-        onClick={() => {
-          setNews((n) => [...n, ...getNews()]);
-        }}
-      >
-        Показать еще
-      </button>
+      {on && (
+        <button
+          className={style.news__button}
+          onClick={() => {
+            const { next, newss } = getNews();
+            setNews((n) => [...n, ...newss]);
+            setOn(next);
+          }}
+        >
+          Показать еще
+        </button>
+      )}
     </div>
   );
 };
