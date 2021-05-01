@@ -1,8 +1,6 @@
 import React, { useState } from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import style from "./Corusel.module.scss";
 import Carousel from "react-bootstrap/Carousel";
-
 export default function CaruselB({ imgs }) {
   const [index, setIndex] = useState(0);
 

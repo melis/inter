@@ -6,6 +6,7 @@ import { useDispatch } from "react-redux";
 import { setOrder } from "../../store/ordered/orderActions";
 import RentTime from "../RentTime/RentTime";
 import CaruselB from "../Corusel/Corusel";
+import "bootstrap/dist/css/bootstrap.min.css";
 // const CaruselB = React.lazy(() => import("../Corusel/Corusel"));
 
 const PhotoBooth = ({ booth }) => {
