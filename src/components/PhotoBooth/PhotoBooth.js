@@ -21,7 +21,7 @@ const PhotoBooth = ({ booth }) => {
       {/* </Suspense> */}
       <div className={style.booth__name}>{booth.name}</div>
       <div className={style.booth__size}>
-        Размер: <span>{booth.size}</span>
+        Размер: <span>{booth.size}</span> v
       </div>
       <Options options={booth.options} setOnOptions={setOnOptions} />
       <RentTime setTime={setTime} time={time} />
