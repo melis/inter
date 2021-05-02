@@ -1,6 +1,8 @@
 .block {
   margin: 5px 0;
   &__title {
+    position: relative;
+    z-index: 5;
     cursor: pointer;
     position: relative;
     background: #fafafa;
@@ -11,9 +13,6 @@
   &__title__active {
     background: #ee3d48;
     color: #fafafa;
-  }
-  &__title__active + &__text {
-    display: block;
   }
   &__bt {
     position: absolute;
@@ -28,14 +27,30 @@
   &__bt__active {
     background-image: url("../../img/block/Vector1.svg");
   }
-  &__text {
-    display: none;
+
+  &__textOut {
+    overflow: auto;
+    z-index: 0;
     position: relative;
+    height: 0;
+    transition: 1s;
+  }
+  &__text {
+    z-index: -1;
+    transition: 1s;
+    position: absolute;
     font-size: 14px;
     line-height: 16px;
     color: #6a6a6a;
     margin: 15px 0;
     padding-left: 10px;
+    bottom: 100%;
+  }
+  &__title__active + &__textOut {
+    height: 125px;
+  }
+  &__title__active + &__textOut &__text {
+    bottom: 0;
   }
   &__text::before {
     left: 0;

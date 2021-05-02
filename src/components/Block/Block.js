@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import style from "./Block.module.scss";
 
 const Block = () => {
   const [active, setActive] = useState(false);
+
   return (
     <div className={style.block}>
       <div
@@ -18,11 +19,13 @@ const Block = () => {
           className={`${style.block__bt} ${active && style.block__bt__active}`}
         ></span>
       </div>
-      <div className={style.block__text}>
-        Какой то текст для заголовка Какой то текст для заго Какой то текст для
-        заголовка Какой то текст для загоКакой то текст для заголовка Какой то
-        текст для заго Какой то текст для заголовка Какой то текст для загоКакой
-        то текст для заголовка Какой то текст для заго
+      <div className={style.block__textOut}>
+        <div className={style.block__text}>
+          Какой то текст для заголовка Какой то текст для заго Какой то текст
+          для заголовка Какой то текст для загоКакой то текст для заголовка
+          Какой то текст для заго Какой то текст для заголовка Какой то текст
+          для загоКакой то текст для заголовка Какой то текст для заго
+        </div>
       </div>
     </div>
   );
