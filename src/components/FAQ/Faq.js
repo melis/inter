@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Block from "../Block/Block";
 import style from "./Faq.module.scss";
 const Faq = () => {
