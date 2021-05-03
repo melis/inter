@@ -1,22 +1,28 @@
 import React, { useState } from "react";
 import style from "./Block.module.scss";
 
-const Block = () => {
-  const [active, setActive] = useState(false);
+const Block = ({ num, active, setActive }) => {
+  // const [active, setActive] = useState(false);
 
   return (
     <div className={style.block}>
       <div
         className={`${style.block__title} ${
-          active && style.block__title__active
+          active === num && style.block__title__active
         }`}
         onClick={() => {
-          setActive(!active);
+          if (active === num) {
+            setActive(0);
+          } else {
+            setActive(num);
+          }
         }}
       >
         Какой реквизит идет в комплекте?
         <span
-          className={`${style.block__bt} ${active && style.block__bt__active}`}
+          className={`${style.block__bt} ${
+            active === num && style.block__bt__active
+          }`}
         ></span>
       </div>
       <div className={style.block__textOut}>
