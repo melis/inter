@@ -1,9 +1,7 @@
-import React, { useState } from "react";
+import React from "react";
 import style from "./Block.module.scss";
 
 const Block = ({ num, active, setActive }) => {
-  // const [active, setActive] = useState(false);
-
   return (
     <div className={style.block}>
       <div
