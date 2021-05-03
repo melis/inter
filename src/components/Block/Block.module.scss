@@ -1,6 +1,7 @@
 .block {
   margin: 5px 0;
   &__title {
+    transition: 1s;
     position: relative;
     z-index: 5;
     cursor: pointer;
