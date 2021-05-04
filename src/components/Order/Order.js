@@ -48,7 +48,7 @@ const Order = ({ history }) => {
         <option value={10}>2 дня</option>
         <option value={15}>3 дня</option>
       </select>
-      {ordered.options.length > 0 ? (
+      {ordered.options.length > 0 && (
         <div className={style.order__ops}>
           {ordered.options.map((el) => (
             <div key={el.id} className={style.order__block}>
@@ -57,7 +57,7 @@ const Order = ({ history }) => {
             </div>
           ))}
         </div>
-      ) : null}
+      )}
       <div className={style.order__block}>
         <div>Итого:</div>
         <div>
@@ -73,6 +73,7 @@ const Order = ({ history }) => {
           e.preventDefault();
           console.log({ ordered, phone });
           alert("Ваша заявка отправлено");
+          history.push("/");
         }}
       >
         <input

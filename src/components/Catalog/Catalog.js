@@ -6,6 +6,7 @@ import style from "./Catalog.module.scss";
 const Catalog = () => {
   const photoBooths = useSelector(({ boothReduser }) => boothReduser.booths);
   const [bArr, setBArr] = useState([...photoBooths]);
+
   const [fillter, setFillter] = useState("");
 
   useEffect(() => {
