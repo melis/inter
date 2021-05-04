@@ -24,8 +24,10 @@
     width: 15px;
     height: 10px;
     background-image: url("../../img/block/Vector2.svg");
+    transition: 1s;
   }
   &__bt__active {
+    transform: rotate(-180deg);
     background-image: url("../../img/block/Vector1.svg");
   }
 
