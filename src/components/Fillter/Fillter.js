@@ -10,7 +10,7 @@ const Fillter = ({ setFillter }) => {
           setFillter(a.target.value);
         }}
       >
-        <option className={style.fillter__item} value="DEFAULT">
+        <option className={style.fillter__item} value="">
           По умолчанию
         </option>
 

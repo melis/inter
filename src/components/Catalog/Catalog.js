@@ -6,23 +6,18 @@ import style from "./Catalog.module.scss";
 const Catalog = () => {
   const photoBooths = useSelector(({ boothReduser }) => boothReduser.booths);
   const [bArr, setBArr] = useState([...photoBooths]);
-  const [fillter, setFillter] = useState("DEFAULT");
+  const [fillter, setFillter] = useState("");
 
   useEffect(() => {
-    let newArr = [];
+    let newArr = [...photoBooths];
     switch (fillter) {
       case "PRICEDOWN":
-        newArr = [...photoBooths];
         newArr.sort((a, b) => b.price - a.price);
         setBArr(newArr);
         break;
       case "PRICEUP":
-        newArr = [...photoBooths];
         newArr.sort((a, b) => a.price - b.price);
         setBArr(newArr);
-        break;
-      case "DEFAULT":
-        setBArr(photoBooths);
         break;
       default:
         setBArr(photoBooths);
